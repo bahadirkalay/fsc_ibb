@@ -13,80 +13,131 @@ class HomeContent extends StatelessWidget {
       padding: EdgeInsets.only(right: _height * 0.02, left: _height * 0.02),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Best Offers',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17)),
-              TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'View All',
-                    style: TextStyle(
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12),
-                  ))
-            ],
+          ///Best Offers başlık alanaıdır. [ HomeTitleWidget ] kullanılmıştır.
+          HomeTitleWidget(
+            title: 'Best Offers',
+            onPressed: () {},
+          ),
+
+          SizedBox(
+            height: _height * 0.02,
+          ),
+
+          ///Best of Widget üst alan listelenen ürnnler [Best Of Widget]
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                BestOfWidget(height: _height, width: _width, img: _img),
+                BestOfWidget(height: _height, width: _width, img: _img),
+                BestOfWidget(height: _height, width: _width, img: _img),
+              ],
+            ),
+          ),
+
+          HomeTitleWidget(
+            title: "Recommended",
+            onPressed: () {},
           ),
           SizedBox(
             height: _height * 0.02,
           ),
-          SizedBox(
-              height: _height * 0.25,
-              width: _width * 0.20,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(_height * 0.02),
-                child: Image.network(
-                  _img,
-                  fit: BoxFit.cover,
+
+          Container(
+            padding: EdgeInsets.only(
+                left: _height * 0.01,
+                right: _height * 0.01,
+                top: _height * 0.01,
+                bottom: _height * 0.01),
+            height: _height * 0.16,
+            width: _width * 0.30,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius:
+                    BorderRadius.all(Radius.circular(_height * 0.02))),
+            child: Column(
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(_height * 0.01),
+                      child: Image.network(
+                        _img,
+                        height: _height * 0.07,
+                        width: _height * 0.07,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                        padding: EdgeInsets.only(
+                            left: _height * 0.01, top: _height * 0.01),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Azura Home Stay',
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 12),
+                            ),
+                            Text(
+                              'Indonesia',
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 11,
+                                  color: Colors.grey),
+                            ),
+                            SizedBox(
+                              height: _height * 0.01,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  '600',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 11),
+                                ),
+                                Text(
+                                  '/month',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 9),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ))
+                  ],
                 ),
-              )),
-          SizedBox(
-            height: _height * 0.01,
-          ),
-          Text(
-            'Belina Home Stay',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Row(
-            children: [
-              Text(
-                'Bali',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11),
-              ),
-              SizedBox(
-                width: _height * 0.005,
-              ),
-              Text(
-                'Indonesia',
-                style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 11,
-                    color: Colors.grey.shade500),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: _height * 0.005,
-          ),
-          Row(
-            children: [
-              Text(
-                '900',
-                style:
-                    TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '/month',
-                style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 11),
-              ),
-            ],
+                SizedBox(
+                  height: _height * 0.01,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'View Detail',
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12),
+                  ),
+                  style: ButtonStyle(
+                      fixedSize: MaterialStateProperty.all(
+                          Size(_width, _height * 0.05)),
+                      elevation: MaterialStateProperty.all(0),
+                      backgroundColor: MaterialStateProperty.all(
+                          Colors.green.withOpacity(0.1))),
+                )
+              ],
+            ),
           )
         ],
       ),
