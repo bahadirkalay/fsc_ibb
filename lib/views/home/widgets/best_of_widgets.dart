@@ -64,7 +64,7 @@ class BestOfWidget extends StatelessWidget {
           Row(
             children: [
               Text(
-                '900',
+                '\$900',
                 style:
                     TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
               ),

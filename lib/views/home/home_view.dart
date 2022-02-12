@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:fsc_ibb/views/home/widgets/best_of_widgets.dart';
 import 'package:fsc_ibb/views/home/widgets/home_title_widget.dart';
+import 'package:fsc_ibb/views/home/widgets/recommended_widget.dart';
 import 'package:stacked/stacked.dart';
 import 'home_view_model.dart';
 
