@@ -17,7 +17,9 @@ class HomeContent extends StatelessWidget {
           ///Best Offers başlık alanaıdır. [ HomeTitleWidget ] kullanılmıştır.
           HomeTitleWidget(
             title: 'Best Offers',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed('bestOfferListRoute');
+            },
           ),
 
           SizedBox(

@@ -7,6 +7,8 @@ import 'package:fsc_ibb/views/splash/splash_view.dart' as view0;
 import 'package:fsc_ibb/views/on_board/on_board_view.dart' as view1;
 import 'package:fsc_ibb/views/home/home_view.dart' as view2;
 import 'package:fsc_ibb/views/help/help_view.dart' as view3;
+import 'package:fsc_ibb/views/best_offers_list/best_offer_list_view.dart'
+    as view4;
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -19,6 +21,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => view2.HomeView());
       case helpViewRoute:
         return MaterialPageRoute(builder: (_) => view3.HelpView());
+      case bestOfferListRoute:
+        return MaterialPageRoute(builder: (_) => view4.BestOfferList());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
