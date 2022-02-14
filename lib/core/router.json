@@ -22,9 +22,14 @@
             "view_name": "HelpView"
         },
         {
-            "file_path": "views/best_offers_list/best_offer_list_view.dar",
+            "file_path": "views/best_offers_list/best_offer_list_view.dart",
             "route_name": "bestOfferListRoute",
             "view_name": "BestOffers"
+        },
+        {
+            "file_path": "views/best_offers_detail/best_offer_detail.dart",
+            "route_name": "bestOfferDetailRoute",
+            "view_name": "BestOfferDetail"
         }
     ]
 }

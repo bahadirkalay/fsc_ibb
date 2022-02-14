@@ -5,3 +5,4 @@ const String onBoardViewRoute = 'onBoardViewRoute';
 const String homeViewRoute = 'homeViewRoute';
 const String helpViewRoute = 'helpViewRoute';
 const String bestOfferListRoute = 'bestOfferListRoute';
+const String bestOfferDetailRoute = 'bestOfferDetailRoute';

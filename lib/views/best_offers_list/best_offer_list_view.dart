@@ -1,8 +1,8 @@
 library best_offer_list_view;
 
 import 'package:flutter/material.dart';
-import 'package:fsc_ibb/views/best_offers_list/widgets/custom_appbar.dart';
-
+import 'package:fsc_ibb/widgets/custom_appbar.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 part 'best_offer_top.dart';
 part 'best_offer_content.dart';
 
